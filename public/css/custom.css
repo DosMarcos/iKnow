@@ -1,0 +1,29 @@
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active {    
+    color: mediumvioletred;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+.bs-icon.bs-icon-primary {
+    background-color: mediumvioletred;
+}
+
+#login {
+    color: whitesmoke;
+    font-weight: 900;
+}
+
+#logout {
+    color: greenyellow;
+    font-weight: 900;
+}
+
+#mainNav {
+    min-height: 100px;
+}
+
+
+
+
+

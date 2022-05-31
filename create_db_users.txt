@@ -1,0 +1,26 @@
+**************************************************
+Hier finden Sie die nötigen SQL-Statements
+um die Datenbank "Users" zu erstellen
+
+Kopieren Sie den Inhalt ab Zeile 10 in phpMyAdmin
+in die SQL-Querybox, und führen Sie diese aus
+**************************************************
+
+
+-- Erstelle Datenbank mit dem Namen "iKnow"
+CREATE DATABASE iKnow;
+
+-- Selektiere Datenbank mit dem Namen "iKnow"
+USE iKnow;
+
+-- Erstelle Tabelle "Users"
+CREATE TABLE Users (
+    UserID INTEGER NOT NULL AUTO_INCREMENT,
+    UserName VARCHAR(255) NOT NULL DEFAULT '',
+    UserEmail VARCHAR(255) NOT NULL DEFAULT '',
+    UserPassword VARCHAR(255) NOT NULL DEFAULT '',
+    UserIsOnline VARCHAR(3) NOT NULL Default '',
+    GameID INTEGER(20) NOT NULL DEFAULT 0,
+    GameOpponent VARCHAR(255) NOT NULL DEFAULT '',
+    PRIMARY KEY (UserID)
+);

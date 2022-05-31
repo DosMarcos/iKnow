@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>    
+  RewriteEngine On
+  RewriteCond %{QUERY_STRING} ^(.*&)?s=(.*)$
+  RewriteRule ^(.*)$ /$1?%1si=%2 [L]
+
+  RewriteCond %{QUERY_STRING} ^(.*&)?l=(.*)$
+  RewriteRule ^(.*)$ /$1?%1li=%2 [L]
+
+  RewriteCond %{QUERY_STRING} ^(.*&)?g=(.*)$
+  RewriteRule ^(.*)$ /$1?%1gi=%2 [L]
+
+  RewriteCond %{QUERY_STRING} ^(.*&)?i=(.*)$
+  RewriteRule ^(.*)$ /$1?%1ii=%2 [L]
+  
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
